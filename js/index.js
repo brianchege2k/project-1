@@ -3,7 +3,7 @@ const productsURL = 'https://dummyjson.com/products';
 fetch(productsURL)
   .then(res => res.json())
   .then(data => {
-    // Check if 'products' key exists in the response data
+    // Check if 'products'  exists in the response data
     if (data.hasOwnProperty('products')) {
       const productsContainer = document.getElementById('products-container');
       
@@ -43,7 +43,7 @@ fetch(productsURL)
         cardBody.appendChild(rating);
         
         const addToCartBtn = document.createElement('button');
-        addToCartBtn.classList.add('btn', 'btn-primary');
+        addToCartBtn.classList.add('btn','add-to-cart-btn');
         addToCartBtn.textContent = 'Add to Cart';
         cardBody.appendChild(addToCartBtn);
         

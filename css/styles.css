@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+html{
+  overflow-x: hidden;
+  }
 *{
   margin: 0;
   padding: 0;
@@ -119,3 +122,64 @@ form .signup-link a:hover{
   color:#FF7F00;
 }
 
+/* styles.css */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards */
+}
+
+.card {
+  width: calc(20% - 20px); /* Adjust card width based on the number of cards per row */
+  padding: 20px;
+  border: 1px solid #ddd; /* Add border for better visibility */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  background-color: #fff; /* Card background color */
+  overflow: hidden; /* Hide overflow content */
+  position: relative; /* Position relative for absolute positioning of children */
+}
+
+.card-img {
+  width: 100%; /* Ensure image fills the card */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card-content {
+  padding: 20px; /* Add padding to content */
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 20px; /* Adjust bottom position */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px); /* Adjust button width */
+  padding: 10px;
+  background-color: #FF7F00; /* Button color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ff9933; /* Button hover color */
+}
