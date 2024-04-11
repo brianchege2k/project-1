@@ -110,3 +110,4 @@ document.getElementById('signupLink').addEventListener('click', function() {
   heroImage.addEventListener('mouseleave', function() {
       this.style.transform = 'scale(1)';
   });
+
