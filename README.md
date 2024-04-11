@@ -4,4 +4,4 @@
 
 ### Project By; Brian Chege Njuguna
 
-This website uses dummyJson API to get product info
+This website uses dummyJson API to get product info:
