@@ -2,12 +2,11 @@ const productsURL = 'https://dummyjson.com/products';
 fetch(productsURL)
   .then(res => res.json())
   .then(data => {
-    // Check if 'products' exists in the data
     if (data.hasOwnProperty('products')) {
       const productsContainer = document.getElementById('products-container');
-      // Iterate over the array of products
+
       data.products.forEach(product => {
-        // card elements
+
         const card = document.createElement('div');
         card.classList.add('card');
         
@@ -50,11 +49,34 @@ fetch(productsURL)
         addToCartBtn.textContent = 'Add to Cart';
         addToCartBtn.dataset.productId = product.id;
         cardBody.appendChild(addToCartBtn);
+
+        //add to cart functionality
+        addToCartBtn.addEventListener('click', function() {
+
+            if(product.stock > 0){
+                product.stock --;
+                stock.textContent =`Stock: ${product.stock}`
+                cartCount++;
+                updateCartCount();
+
+            }else{
+
+                alert(`Sorry, ${product.title} Out of Stock`)
+
+            }
+            
+  });
+cardBody.appendChild(addToCartBtn);
+
+
+card.appendChild(cardBody);
+
+productsContainer.appendChild(card);
+
         
-        card.appendChild(cardBody);
+card.appendChild(cardBody);
         
-        // Append the card to the products container
-        productsContainer.appendChild(card);
+productsContainer.appendChild(card);
       });
     } else {
       console.error('No products found in the response data.');
@@ -65,5 +87,14 @@ fetch(productsURL)
   });
 
 
-//add to cart functionality
+// Initialize the cart count to 0
+let cartCount = 0;
+function updateCartCount() {
+  const cartCountElement = document.getElementById('cart-count');
+  cartCountElement.textContent = cartCount;
+}
+
+
+
+
 
