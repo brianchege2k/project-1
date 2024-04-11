@@ -8,7 +8,7 @@
 
 This website uses dummyJson API to get products info:
 
-[DummyJSON API LINK](https://dummyjson.com/products')
+[DummyJSON API LINK](https://dummyjson.com/products)
 
 Other software used:
 
