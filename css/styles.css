@@ -122,31 +122,51 @@ form .signup-link a:hover{
   color:#FF7F00;
 }
 
-/* styles.css */
+
+
 .product-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between cards */
+  gap: 20px; 
+  justify-content: center;
 }
 
 .card {
-  width: calc(20% - 20px); /* Adjust card width based on the number of cards per row */
+  width: calc(20% - 20px); 
   padding: 20px;
-  border: 1px solid #ddd; /* Add border for better visibility */
+  border: 1px solid #ddd; 
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  background-color: #fff; /* Card background color */
-  overflow: hidden; /* Hide overflow content */
-  position: relative; /* Position relative for absolute positioning of children */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  background-color: #fff; 
+  overflow: hidden; 
+  position: relative;
+}
+@media (max-width: 992px) {
+  .card {
+    width: 25%; 
+  }
 }
 
+@media (max-width: 768px) {
+  .card {
+    width: 33.33%; 
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 50%; 
+  }
+}
+
+
 .card-img {
-  width: 100%; /* Ensure image fills the card */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  height: auto; 
 }
 
 .card-content {
-  padding: 20px; /* Add padding to content */
+  padding: 20px; 
 }
 
 .card-title {
@@ -166,20 +186,18 @@ form .signup-link a:hover{
 }
 
 .add-to-cart-btn {
-  position: absolute;
-  bottom: 20px; /* Adjust bottom position */
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 40px); /* Adjust button width */
-  padding: 10px;
-  background-color: #FF7F00; /* Button color */
-  color: #fff; /* Button text color */
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  position: absolute; 
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: #FF7F00; 
+  color: #fff; 
+  border: none; 
+  padding: 8px 15px; 
+  border-radius: 4px; 
+  cursor: pointer; /
 }
 
 .add-to-cart-btn:hover {
-  background-color: #ff9933; /* Button hover color */
+  background-color: #ff9933;
 }
