@@ -96,7 +96,7 @@ function updateCartCount() {
 
 document.getElementById('signupLink').addEventListener('click', function() {
     // Show the Signup modal
-    var signupModal = new bootstrap.Modal(document.getElementById('signupModal'));
+    let signupModal = new bootstrap.Modal(document.getElementById('signupModal'));
     signupModal.show();
   });
 
