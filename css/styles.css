@@ -31,6 +31,18 @@ body{
   background-color: #ff9933;
 }
 
+/* Nav Media Queries */
+@media (max-width: 992px) {
+  .navbar-brand {
+    margin-right: auto; 
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    margin-left: auto; 
+}
+}
 /* HERO SECTION */
 .hero {
   background-color: #f8f9fa;
@@ -346,3 +358,5 @@ body{
 .footer a:hover {
   color:#FF7F00; 
 }
+
+
