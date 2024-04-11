@@ -9,7 +9,7 @@ html{
   font-family: 'Poppins',sans-serif;
 }
 body{
-  background: white;
+  
   overflow: hidden;
 }
 
@@ -20,6 +20,15 @@ body{
 }
 .navbar-nav .nav-link{
   color:#FF7F00;
+}
+.search-btn{
+  background-color: #FF7F00;
+  color: #ffffff;
+  border-color: #FF7F00;
+}
+
+.search-btn:hover{
+  background-color: #ff9933;
 }
 
 /* HERO SECTION */
@@ -175,10 +184,10 @@ body{
     width: 50%; 
   }
   .add-to-cart-btn {
-    width: 80%; /* Adjust button width */
+    width: 80%; 
     left: 50%; 
     transform: translateX(-50%); 
-    bottom: 5px; /* Adjust button position */
+    bottom: 5px; 
   }
 }
 .card-img {
@@ -257,9 +266,7 @@ body{
   position: relative;
 }
 
-#signupModal .modal-body input[type="text"],
-#signupModal .modal-body input[type="email"],
-#signupModal .modal-body input[type="password"] {
+#signupModal .modal-body input{
   height: 45px;
   width: 100%;
   padding-left: 60px;
@@ -317,8 +324,6 @@ body{
   text-decoration: underline;
 
 }
-
-
 /* footer */
 .footer {
   bottom: 0;
