@@ -39,7 +39,12 @@ fetch(productsURL)
         rating.classList.add('card-text');
         rating.textContent = `Rating: ${product.rating}`;
         cardBody.appendChild(rating);
-        
+
+        const stock = document.createElement('p')
+        stock.classList.add('card-text')
+        stock.textContent = `Stock: ${product.stock}`
+        cardBody.appendChild(stock)
+
         const addToCartBtn = document.createElement('button');
         addToCartBtn.classList.add('btn','add-to-cart-btn');
         addToCartBtn.textContent = 'Add to Cart';
@@ -60,33 +65,5 @@ fetch(productsURL)
   });
 
 
-//cart functionality
+//add to cart functionality
 
-// Initialize shopping cart
-let cart = [];
-
-// Function to add item to cart
-function addToCart(product) {
-    cart.push(product);
-    // Update cart icon in navbar
-    updateCartIcon();
-}
-
-// Function to update cart icon in navbar
-function updateCartIcon() {
-    const cartIcon = document.getElementById('cart-icon');
-    cartIcon.textContent = cart.length;
-}
-// Attach event listener to each "Add to Cart" button
-document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        // Retrieve product details from the button's data attribute
-        const productId = button.dataset.productId;
-        const product = getProductById(productId); // Implement this function to get product details by ID
-        if (product) {
-            addToCart(product);
-            // Optionally, display a confirmation message to the user
-            alert('Item added to cart!');
-        }
-    });
-});
