@@ -122,7 +122,15 @@ form .signup-link a:hover{
   color:#FF7F00;
 }
 
+.hero {
+  background-color: #f8f9fa;
+  padding: 60px 20px; /
+}
 
+.hero img {
+  max-width: 100%; 
+  height: auto; 
+}
 
 .product-container {
   display: flex;

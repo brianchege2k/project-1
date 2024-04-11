@@ -8,9 +8,8 @@
     <title>Shop'r</title>
 </head>
 <body>
-
   <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="logo" height="40" width="40"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,9 +22,9 @@
               </form>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./sign-in.html">
-                        <i class="fas fa-user"></i> Sign In
-                    </a>
+                  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signInModal">
+                    <i class="fas fa-user"></i> Sign In
+                </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="">
@@ -37,6 +36,93 @@
           </div>
         </div>
       </nav>
+          <!-- Hero Section -->
+    <div class="container-fluid hero">
+      <div class="row align-items-center">
+          <div class="col-lg-6">
+              <h1>Welcome to  Shop'r!</h1>
+              <p>Fugiat qui do qui veniam sit. Dolore irure aute dolor pariatur sint sunt proident culpa cupidatat commodo anim nisi. Occaecat Lorem laboris et ipsum cillum.</p>
+          </div>
+          <div class="col-lg-6">
+              <img src="./img/Wavy_Med-10_Single-03.jpg" alt="Hero Image" class="img-fluid">
+          </div>
+      </div>
+  </div>
+
+      <!-- Sign in Modal -->
+      <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="./img/logo.svg" alt="logo" width="100" height="100">
+              <div class="title"><span>Login</span></div>
+              <form action="#">
+                <div class="mb-3">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Email or Phone" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" placeholder="Password" class="form-control" required>
+                </div>
+                <div class="pass"><a href="#">Forgot password?</a></div>
+                <div class="row button">
+                  <input type="submit" value="Login" class="btn btn-primary">
+                </div>
+                <div class="signup-link">Not a member? <a href='' id="signupLink">Signup now</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign Up Modal -->
+
+      <!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./img/logo.svg" alt="logo" width="100" height="100">
+        <div class="title"><span>Sign Up</span></div>
+        <form action="#">
+          <div class="row">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" required>
+          </div>
+          <div class="row">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" required>
+          </div>
+          <div class="row">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" required>
+          </div>
+          <div class="row">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Confirm Password" required>
+          </div>
+          <div class="row button">
+              <input type="submit" value="Sign Up">
+          </div>
+          <div class="login-link">Already a member? <a href="./sign-in.html">Login now</a></div>
+      </form>
+          <div class="login-link">Already a member? <a href="#" id="loginLink">Login now</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
       <!-- Products section -->
       <div id="products-container" class="product-container">
