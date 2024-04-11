@@ -18,7 +18,9 @@ Other software used:
 
 [FontAwesome Kit Js](https://kit.fontawesome.com/639b381c2d.js)
 
+## LINK TO DEPLOYED PAGE
 
+[Github Pages](https://brianchege2k.github.io/project-1/)
 
 
 
