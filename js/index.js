@@ -50,7 +50,7 @@ fetch(productsURL)
         addToCartBtn.dataset.productId = product.id;
         cardBody.appendChild(addToCartBtn);
 
-        //add to cart functionality
+        //add to cart click eventlistener
         addToCartBtn.addEventListener('click', function() {
 
             if(product.stock > 0){
@@ -100,5 +100,13 @@ document.getElementById('signupLink').addEventListener('click', function() {
     signupModal.show();
   });
 
+//Hero image eventListner
+  const heroImage = document.getElementById('hero-image');
 
-
+  heroImage.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05)';
+  });
+  
+  heroImage.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+  });
