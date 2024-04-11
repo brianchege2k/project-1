@@ -94,11 +94,6 @@ function updateCartCount() {
   cartCountElement.textContent = cartCount;
 }
 
-document.getElementById('signupLink').addEventListener('click', function() {
-    // Show the Signup modal
-    let signupModal = new bootstrap.Modal(document.getElementById('signupModal'));
-    signupModal.show();
-  });
 
 //Hero image eventListner
   const heroImage = document.getElementById('hero-image');
