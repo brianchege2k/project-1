@@ -86,14 +86,12 @@ productsContainer.appendChild(card);
     console.error('Error fetching product data:', error);
   });
 
-
 // Initialize the cart count to 0
 let cartCount = 0;
 function updateCartCount() {
   const cartCountElement = document.getElementById('cart-count');
   cartCountElement.textContent = cartCount;
 }
-
 
 //Hero image eventListner
   const heroImage = document.getElementById('hero-image');
